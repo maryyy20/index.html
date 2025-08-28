@@ -1,0 +1,209 @@
+:root {
+  --cor-principal: #33ff99; /* Verde neon, inspirado no portal */
+  --cor-secundaria: #0b0c10; /* Fundo escuro */
+  --cor-texto: #c5c6c7; /* Cinza claro para texto */
+}
+
+/* Ajustes gerais */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  font-size: 16px;
+
+  /* Mantém footer no final */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  /* Remove scroll lateral */
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1; /* ocupa espaço entre header e footer */
+}
+
+/* Menu centralizado */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: var(--cor-principal);
+  padding: 12px;
+}
+
+.menu button {
+  background: #0b0c10;
+  color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu button:hover {
+  background: var(--cor-principal);
+  color: #0b0c10;
+}
+
+/* Botões de acessibilidade */
+.acessibilidade {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.acessibilidade button {
+  margin: 0 5px;
+  padding: 6px 10px;
+  border: 2px solid var(--cor-principal);
+  background: #0b0c10;
+  color: var(--cor-principal);
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.acessibilidade button:hover {
+  background: var(--cor-principal);
+  color: #0b0c10;
+}
+
+/* Banner separado */
+.banner {
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  max-width: 1200px; /* garante que não estoura */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Sessão Sobre */
+.sobre {
+  background: url("https://wallpaperaccess.com/full/317501.jpg") center/cover no-repeat;
+  position: relative;
+  padding: 60px 20px;
+}
+
+.sobre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 12, 16, 0.75);
+}
+
+.sobre-content {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #33ff99;
+  text-shadow: 1px 1px 5px #000;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Galeria */
+.galeria {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.grid-galeria img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--cor-principal);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.05);
+  border-color: #00ffcc;
+}
+
+/* Contato */
+.contato {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #121518;
+  border-top: 3px solid var(--cor-principal);
+  border-bottom: 3px solid var(--cor-principal);
+  color: var(--cor-texto);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea, form button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--cor-principal);
+  background-color: #0b0c10;
+  color: var(--cor-principal);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #33ff99aa;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  background-color: #1f2226;
+  border-color: #00ffcc;
+  color: #00ffcc;
+}
+
+form button {
+  background: var(--cor-principal);
+  color: #0b0c10;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background: #00ffcc;
+  color: #0b0c10;
+}
+
+/* Footer */
+footer {
+  background-color: #0b0c10;
+  color: var(--cor-principal);
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
