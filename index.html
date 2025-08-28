@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site Acessível - Rick and Morty</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="acessibilidade.js"></script>
+</head>
+<body>
+  <!-- Menu no topo centralizado -->
+  <nav class="menu">
+    <button onclick="location.href='#home'">Home</button>
+    <button onclick="location.href='#sobre'">Sobre</button>
+    <button onclick="location.href='#galeria'">Galeria</button>
+    <button onclick="location.href='#contato'">Contato</button>
+  </nav>
+
+  <!-- Botões de acessibilidade -->
+  <div class="acessibilidade">
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+    <button onclick="resetFonte()">Resetar</button>
+  </div>
+
+  <!-- Banner separado -->
+  <header id="home" class="banner">
+    <img src="https://upload.wikimedia.org/wikipedia/pt/2/29/Rick_and_Morty_logo.png" alt="Banner do site Rick and Morty" />
+  </header>
+
+  <!-- Sessão Sobre -->
+  <section id="sobre" class="sobre">
+    <div class="sobre-content">
+      <h1>Sobre Nós</h1>
+      <p>
+        Rick and Morty é uma série animada norte-americana que mistura ficção científica, comédia e aventura.
+        Acompanhe as loucas viagens do cientista genial Rick e seu neto Morty por universos paralelos, enfrentando desafios bizarros e situações hilárias.
+        A série é conhecida por seu humor ácido, criatividade e críticas sociais.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sessão Galeria -->
+  <section id="galeria" class="galeria">
+    <h2>Galeria</h2>
+    <div class="grid-galeria">
+      <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez" />
+      <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Morty Smith" />
+      <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Summer Smith" />
+      <img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Beth Smith" />
+    </div>
+  </section>
+
+  <!-- Sessão Contato -->
+  <section id="contato" class="contato">
+    <h2>Junte-se à Equipe!</h2>
+    <p>Estamos buscando fãs apaixonados por Rick and Morty para colaborar em nossos projetos e expandir o universo do site.
+    Se você é criativo e gosta da série, venha fazer parte dessa aventura!</p>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 site de Rick and Morty. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
